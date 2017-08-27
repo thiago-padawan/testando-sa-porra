@@ -21,3 +21,7 @@ MANDANDO COMMITS PARA O GITHUB-----------------------------------
 |git push origin master // Manda os commits realizados para o repositório no github
 |
 |git clone <link do repositorio> //clona o repositorio remoto do link especificado
+
+
+AREA DE STAGE - A partir do momento que adicionamos um arquivo pela primeira vez ele entra na area de stage
+,agora qualquer modficação será rastreada pelo git.
