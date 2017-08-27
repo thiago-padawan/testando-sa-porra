@@ -6,6 +6,14 @@ git init //Inicia um respositório git
 
 git status //Diz a situação dos arquivos no repositório (se esta rastreado ou se foi modificado)
 
-git commit //Comita a situação(status) atual dos arquivos
+git commit -m //Comita a situação(status) atual dos arquivos
 
 git log // Mostra todos o commits realizados
+
+
+MANDANDO COMMITS PARA O GITHUB-----------------------------------
+| git remote add <origin> <link do seu repositório> // Adiciona o nome origin para o repositório remoto no link especificado
+|
+|git push origin master // Manda os commits realizados para o repositório no github
+|
+|
