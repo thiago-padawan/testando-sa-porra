@@ -1,5 +1,11 @@
 echo ~ //Diz em qual pasta vc esta
+
 cd ~   // Acessa diretórioas a partir do qual vc esta
+
 git init //Inicia um respositório git
+
 git status //Diz a situação dos arquivos no repositório (se esta rstreado ou se foi modificado)
+
 git commit //Comita a situação(status) autal dos arquivos
+
+git log // Mostra todos o commits realizados
