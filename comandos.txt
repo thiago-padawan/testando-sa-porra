@@ -1,0 +1,2 @@
+echo ~ //Diz em qual pasta vc esta
+cd ~   // Acessa diretórioas a partir do qual vc esta
