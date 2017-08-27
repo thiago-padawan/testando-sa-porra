@@ -12,8 +12,8 @@ git log // Mostra todos o commits realizados
 
 
 MANDANDO COMMITS PARA O GITHUB-----------------------------------
-| git remote add <origin> <link do seu repositório> // Adiciona o nome origin para o repositório remoto no link especificado
+| git remote add <origin> <link do seu repositório> // Aponta o nome <origin> para o repositório remoto no link especificado
 |
 |git push origin master // Manda os commits realizados para o repositório no github
 |
-|
+|git clone <link do repositorio> //clona o repositorio remoto do link especificado
