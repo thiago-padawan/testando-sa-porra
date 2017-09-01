@@ -11,8 +11,14 @@ git add <nome do arquivo ou pasta> // adiciona arquivos ou pastas não traqueada
 |-git add . //Adiciona todos os arquivos ou pastas não traqueadas
 
 git commit -m //Comita a situação(status) atual dos arquivos
+|-git commit -am //Comita os arquivos adicionas e os modificados que ja estejam no area de stage
 
 git log // Mostra todos o commits realizados
+|-git log -n <x> //Mostra os <x> ultimos commits realizados
+|-git log --oneline //Mostra os commits em apenas ua linha
+|-git log --stat //Mostra um resumo dos arquivos alterados, com o número de linhas adicionadas e removidas
+|
+|
 
 
 MANDANDO COMMITS PARA O GITHUB-----------------------------------
@@ -39,6 +45,10 @@ git init //Inicia um respositório git
 |-git init <nome da pasta> // cria um respositorio com o nome especificado
 
 git status //Diz a situação dos arquivos no repositório (se esta rastreado ou se foi modificado)
+
+git diff //Mostras as alterações que ocorreram em todos os aquivos que estejam na area de stage
+|-git diff <nome do arquivo> //Mostra apenas as alterações que ocorreram no arquivo especificado
+|-NÃO SE PODE USAR GIT DIFF EM AQUIVOS QUE NÃO ESTEJAM NA AREA DE STAGE
 
 git add <nome do arquivo ou pasta> // adiciona arquivos ou pastas não traqueadas
 |-git add . //Adiciona todos os arquivos ou pastas não traqueadas
