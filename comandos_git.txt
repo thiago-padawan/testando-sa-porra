@@ -61,4 +61,18 @@ git mv <nome antigo> <nome novo>//Renomeia um arquivo especifico
   ▲-A mudança de pasta tambem deve ser commitada para ficar gravada no
     histórico.
 ----------------------------------------------------------------------
+git checkout -- <nome do arquivo> //Remove as mudanças feitas que ainda
+  não foram para area de stage
+----------------------------------------------------------------------
+git reset -- <nome do arquivo> //Retira o arquivo da area de stage e ele
+  fica como se não tivesse sido rastrado
+  |-git reset //Mesma coisa que o anterior mas vai se aplicar a todos os arquivos
+  |-git reset --hard//Retira todos os arquivos da area de stage e remove as
+    alterações feitas desde o ultimo commit.(Basicamente retorna ao ultimo
+    commit.)
+----------------------------------------------------------------------
+git revert --no-edit <código de um commit> - voltara o estado para o código do
+commit especificado
+▲-Porem esse retorno ficara registrado no histórico oque é muito mais recomendado
+----------------------------------------------------------------------
 O CÓDIGO DO ULTIMO COMMIT PODE SER SUBSTITUIDO POR HEAD PORÉM ISSO PODE MUDAR
