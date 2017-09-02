@@ -37,9 +37,11 @@ AREA DE STAGE - A partir do momento que adicionamos um arquivo pela primeira vez
 |-<nome da pasta>/ // O git vai ignorar essa pasta e todos os arquivos dentro dela
 |-*.<nome da extenção> // Git vai ignorar todos arquivos com essa extenção
 |-<nome da pasta>/*.<nome da extenção> //O git vai iginorar todos arquivos com a extenção expecificada na pasta expecificada
-git diff //Mostras as alterações que ocorreram em todos os aquivos que estejam na area de stage
 ----------------------------------------------------------------------
+git diff //Mostras as alterações que ocorreram nos arquivos que estão fora da area de stage em comparação com o ultimo commit
 |-git diff <nome do arquivo> //Mostra apenas as alterações que ocorreram no arquivo especificado
 |-git diff --staged //Compara o aquivo na area de stage com o ultimo commit realizado
-|-NÃO SE PODE USAR GIT DIFF EM AQUIVOS QUE NÃO ESTEJAM NA AREA DE STAGE
+|-PARA COMPARARMOS OS ARQUIVOS TANTO NA AREA DE STAGE QUANTO OS QUE NÃO FORAM RASTREADOS
+  EM RELAÇÃO AO ULTIMOS COMMIT DEVEMOS PEGAR O CÓDIGO DO COMMIT(COM git log -n 1 --oneline)
+  E EXECUTAR git diff <código_do_commit>
 ----------------------------------------------------------------------
