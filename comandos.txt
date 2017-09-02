@@ -1,18 +1,18 @@
 echo ~ //Diz em qual pasta vc esta
-
+----------------------------------------------------------------------
 cd ~   // Acessa diretórios a partir do qual vc esta
-
+----------------------------------------------------------------------
 git init //Inicia um respositório git
 |-git init <nome da pasta> // cria um respositorio com o nome especificado
-
+----------------------------------------------------------------------
 git status //Diz a situação dos arquivos no repositório (se esta rastreado ou se foi modificado)
-
+----------------------------------------------------------------------
 git add <nome do arquivo ou pasta> // adiciona arquivos ou pastas não traqueadas
 |-git add . //Adiciona todos os arquivos ou pastas não traqueadas
-
+----------------------------------------------------------------------
 git commit -m //Comita a situação(status) atual dos arquivos
 |-git commit -am //Comita os arquivos adicionas e os modificados que ja estejam no area de stage
-
+----------------------------------------------------------------------
 git log // Mostra todos o commits realizados
 |-git log -n <x> //Mostra os <x> ultimos commits realizados
 |-git log --oneline //Mostra os commits em apenas ua linha
@@ -20,7 +20,7 @@ git log // Mostra todos o commits realizados
 |
 |
 
-
+----------------------------------------------------------------------
 MANDANDO COMMITS PARA O GITHUB-----------------------------------
 | git remote add <origin> <link do seu repositório> // Aponta o nome <origin> para o repositório remoto no link especificado
 |
@@ -28,49 +28,18 @@ MANDANDO COMMITS PARA O GITHUB-----------------------------------
 |
 |git clone <link do repositorio> //clona o repositorio remoto do link especificado
 
-
+----------------------------------------------------------------------
 AREA DE STAGE - A partir do momento que adicionamos um arquivo pela primeira vez ele entra na area de stage
 ,agora qualquer modficação será rastreada pelo git.
-
+----------------------------------------------------------------------
 .gitignore //Arquivo txt que contem todos arquivos ou pastas que o git deve ignorar
 |-<nome do arquivo>.<extenção do arquivo> //O git via ignorar esse arquivo
 |-<nome da pasta>/ // O git vai ignorar essa pasta e todos os arquivos dentro dela
 |-*.<nome da extenção> // Git vai ignorar todos arquivos com essa extenção
 |-<nome da pasta>/*.<nome da extenção> //O git vai iginorar todos arquivos com a extenção expecificada na pasta expecificada
-echo ~ //Diz em qual pasta vc esta
-
-cd ~   // Acessa diretórios a partir do qual vc esta
-
-git init //Inicia um respositório git
-|-git init <nome da pasta> // cria um respositorio com o nome especificado
-
-git status //Diz a situação dos arquivos no repositório (se esta rastreado ou se foi modificado)
-
 git diff //Mostras as alterações que ocorreram em todos os aquivos que estejam na area de stage
+----------------------------------------------------------------------
 |-git diff <nome do arquivo> //Mostra apenas as alterações que ocorreram no arquivo especificado
+|-git diff --staged //Compara o aquivo na area de stage com o ultimo commit realizado
 |-NÃO SE PODE USAR GIT DIFF EM AQUIVOS QUE NÃO ESTEJAM NA AREA DE STAGE
-
-git add <nome do arquivo ou pasta> // adiciona arquivos ou pastas não traqueadas
-|-git add . //Adiciona todos os arquivos ou pastas não traqueadas
-
-git commit -m //Comita a situação(status) atual dos arquivos
-
-git log // Mostra todos o commits realizados
-
-
-MANDANDO COMMITS PARA O GITHUB-----------------------------------
-| git remote add <origin> <link do seu repositório> // Aponta o nome <origin> para o repositório remoto no link especificado
-|
-|git push origin master // Manda os commits realizados para o repositório no github
-|
-|git clone <link do repositorio> //clona o repositorio remoto do link especificado
-
-
-AREA DE STAGE - A partir do momento que adicionamos um arquivo pela primeira vez ele entra na area de stage
-,agora qualquer modficação será rastreada pelo git.
-
-.gitignore //Arquivo txt que contem todos arquivos ou pastas que o git deve ignorar
-|-<nome do arquivo>.<extenção do arquivo> //O git via ignorar esse arquivo
-|-<nome da pasta>/ // O git vai ignorar essa pasta e todos os arquivos dentro dela
-|-*.<nome da extenção> // Git vai ignorar todos arquivos com essa extenção
-|-<nome da pasta>/*.<nome da extenção> //O git vai iginorar todos arquivos com a extenção expecificada na pasta expecificada
+----------------------------------------------------------------------
