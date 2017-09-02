@@ -44,4 +44,21 @@ git diff //Mostras as alterações que ocorreram nos arquivos que estão fora da
 |-PARA COMPARARMOS OS ARQUIVOS TANTO NA AREA DE STAGE QUANTO OS QUE NÃO FORAM RASTREADOS
   EM RELAÇÃO AO ULTIMOS COMMIT DEVEMOS PEGAR O CÓDIGO DO COMMIT(COM git log -n 1 --oneline)
   E EXECUTAR git diff <código_do_commit>
+|-git diff <código de um commit>..<código de outro commit>//Mostra as diferenças entre dois commits especificos
+|-git diff <código de um commit>~3//Mostra a diferença entre o commit do código especificado em relação aos
+  ultimos 3 ultimos realizados anteriormente.
+  ▲-Este comando vai considerar tambem os arquivos na area de stage e os modificados
 ----------------------------------------------------------------------
+git rm <nome do arquivo> //Remove um arquivo do repositório e ja adiciona a remoção a area de stage
+▲-Para que a remoção seja efetuada de verdade ela deve ser commitada
+----------------------------------------------------------------------
+git mv <nome antigo> <nome novo>//Renomeia um arquivo especifico
+▲-Essa mudança vai ser adicionada na area de stage para que isso fique gravado
+  no histórico devemos commitar isso.
+|-git mv <nome do arquivo> <nova pasta>/<nome do arquivo>//Move o arquivo para
+  a nova pasta especificada
+  ▲-Essa nova pasta ja deve estar criada antes da transferencia.
+  ▲-A mudança de pasta tambem deve ser commitada para ficar gravada no
+    histórico.
+----------------------------------------------------------------------
+O CÓDIGO DO ULTIMO COMMIT PODE SER SUBSTITUIDO POR HEAD PORÉM ISSO PODE MUDAR
