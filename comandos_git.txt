@@ -13,12 +13,16 @@ git add <nome do arquivo ou pasta> // adiciona arquivos ou pastas não traqueada
 git commit -m //Comita a situação(status) atual dos arquivos
 |-git commit -am //Comita os arquivos adicionas e os modificados que ja estejam no area de stage
 ----------------------------------------------------------------------
+git branch // Mostra todas as branchs do repositório
+|-git branch -v //Além de mostrar as branchs mostra para quais commits
+    essas branches estão apontando
+----------------------------------------------------------------------
 git log // Mostra todos o commits realizados
 |-git log -n <x> //Mostra os <x> ultimos commits realizados
 |-git log --oneline //Mostra os commits em apenas ua linha
 |-git log --stat //Mostra um resumo dos arquivos alterados, com o número de linhas adicionadas e removidas
-|
-|
+|-git log --parents //Mostra os commists com seus respectivos commits-pai
+|-git log --decorate //Destaca o commit para qual a branch atual esta apontando
 
 ----------------------------------------------------------------------
 MANDANDO COMMITS PARA O GITHUB-----------------------------------
@@ -95,3 +99,15 @@ PROTOCOLOS SUPORTADOS PELO GIT:
   -SSH
   -HTTP ou HTTPS
   -Git
+----------------------------------------------------------------------
+Coisas do GitHub
+
+-Issue Tracker: para criação e gestão de bugs e milestones do projeto;
+-Pull Requests: para que outros usuários possam enviar seus commits
+ com alterações no projeto, ou commits com correções de bugs;
+-Commit Comments: para que os usuários possam comentar e discutir
+ sobre as modificações no código, de um determinado commit.
+ ----------------------------------------------------------------------
+Fork //Faz uma cópia de um repositório no git hub para sua conta no github
+
+ ----------------------------------------------------------------------
