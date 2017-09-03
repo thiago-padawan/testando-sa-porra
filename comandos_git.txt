@@ -27,7 +27,15 @@ MANDANDO COMMITS PARA O GITHUB-----------------------------------
 |git push origin master // Manda os commits realizados para o repositório no github
 |
 |git clone <link do repositorio> //clona o repositorio remoto do link especificado
-
+----------------------------------------------------------------------
+git remote //Mostra os nomes que estão apontados para repositórios remotos
+|-git remote -v //Alem de mostrar os nome mostra os detalhes como a URL
+    de leitura (fetch) e a URL de escrita (push)
+|-git remote rename <nome antigo> <nome novo> //Renomeia o nome de um repositório remoto
+|-git remote set-url <nome do repositorio> //Muda a URL do nome de um repositóro remoto
+----------------------------------------------------------------------
+git push <nome do repositorio> <branch> //Envia os commits realizados para
+  o repositorio remoto especificado na branch especificada
 ----------------------------------------------------------------------
 AREA DE STAGE - A partir do momento que adicionamos um arquivo pela primeira vez ele entra na area de stage
 ,agora qualquer modficação será rastreada pelo git.
