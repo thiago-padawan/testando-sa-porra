@@ -37,6 +37,11 @@ git remote //Mostra os nomes que estão apontados para repositórios remotos
 git push <nome do repositorio> <branch> //Envia os commits realizados para
   o repositorio remoto especificado na branch especificada
 ----------------------------------------------------------------------
+git clone <URL do repositório> //Cria uma cópia do repositório na sua maquina
+----------------------------------------------------------------------
+git pull <nome do repositório> <branch> //Irá sincronizar o seu repositório local com
+  o repositório do servidor,ou seja,atualizar os commits que não vieram da sua maquina.
+----------------------------------------------------------------------
 AREA DE STAGE - A partir do momento que adicionamos um arquivo pela primeira vez ele entra na area de stage
 ,agora qualquer modficação será rastreada pelo git.
 ----------------------------------------------------------------------
@@ -84,3 +89,9 @@ commit especificado
 ▲-Porem esse retorno ficara registrado no histórico oque é muito mais recomendado
 ----------------------------------------------------------------------
 O CÓDIGO DO ULTIMO COMMIT PODE SER SUBSTITUIDO POR HEAD PORÉM ISSO PODE MUDAR
+----------------------------------------------------------------------
+PROTOCOLOS SUPORTADOS PELO GIT:
+  -Local
+  -SSH
+  -HTTP ou HTTPS
+  -Git
