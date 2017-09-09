@@ -16,6 +16,11 @@ git commit -m //Comita a situação(status) atual dos arquivos
 git branch // Mostra todas as branchs do repositório
 |-git branch -v //Além de mostrar as branchs mostra para quais commits
     essas branches estão apontando
+|-git branch -r //Mostrara as branches remotas ,ou seja as branch que vieram
+  de um repositório remoto, ela é apresentada da seguinte forma
+  <nome que aponta para o repositório remoto>/<nome de branch> ,exemplo:
+  origin/master
+|-git branch -a //Mostra tanto as branches locais quanto as remotas
 |-git branch -d <nome da branch> //Deleta uma branch em que nela ainda não
   foi executado nenhum commit
 |-git branch -D <nome da branch> //Deleta uma branch mesmo se nela ja houveram
@@ -57,13 +62,34 @@ git remote //Mostra os nomes que estão apontados para repositórios remotos
 |-git remote rename <nome antigo> <nome novo> //Renomeia o nome de um repositório remoto
 |-git remote set-url <nome do repositorio> //Muda a URL do nome de um repositóro remoto
 ----------------------------------------------------------------------
-git push <nome do repositorio> <branch> //Envia os commits realizados para
+|-git push <nome do repositorio> <branch> //Envia os commits realizados para
   o repositorio remoto especificado na branch especificada
+|-git push <nome do repositorio remoto> :<branch> //Esses dois pontos rão remover
+  a branch la no repositório remoto
+|-git push <nome do repositório remoto> <nome da tag> //Ira mandar a tag especificada para o
+  repositório remoto especificado
+|-git push <nome do repositório remoto> --tags //Ira mandar todas as tag para p repositório
+  especificado
 ----------------------------------------------------------------------
 git clone <URL do repositório> //Cria uma cópia do repositório na sua maquina
 ----------------------------------------------------------------------
 git pull <nome do repositório> <branch> //Irá sincronizar o seu repositório local com
   o repositório do servidor,ou seja,atualizar os commits que não vieram da sua maquina.
+|-git pull --rebase //Ira sincronizar todos o commits e fazer um rebase na branch master
+----------------------------------------------------------------------
+TAGS
+Irão apontar para um commit especifico
+  ▲-não podem conter alguns caracteres especiais como ~, ^ e :, além de
+  sequências de caracteres como .. e @{.
+|-git tag //Ira listar todas as tags
+|-git tag <nome da tag> //Ira tagear o ultimos commit com o nome especificado
+|-git tag <nome da tag> <código do commit> //Ira tagear o commit especificado com
+  o nome especificado
+|-git -d <nome da tag>//Ira deletar a tag especificada
+|-git tag -a <nome da tag> -m <mensagem descritiva> //Nesse caso podera se colocar
+  algumas informações adicionais na tag criada
+----------------------------------------------------------------------
+git show -s <nome da tag>//Ira mostrar detalhes da tag especificada
 ----------------------------------------------------------------------
 AREA DE STAGE - A partir do momento que adicionamos um arquivo pela primeira vez ele entra na area de stage
 ,agora qualquer modficação será rastreada pelo git.
@@ -97,12 +123,18 @@ git mv <nome antigo> <nome novo>//Renomeia um arquivo especifico
   ▲-A mudança de pasta tambem deve ser commitada para ficar gravada no
     histórico.
 ----------------------------------------------------------------------
-git checkout <nome da branch> //Traca para brancha especificada
-git checkout -b <nome da nova branch> //Cria uma nova branch e ja troca pra ela
-
-git checkout -- <nome do arquivo> //Remove as mudanças feitas que ainda
+git checkout <nome da branch> //Troca para branch especificada
+|-git checkout -b <nome da nova branch> //Cria uma nova branch e ja troca pra ela
+|-git checkout -b <nome da nova branch> <branch remota>//Cria uma nova branch
+  a partir de uma ja existente sendo ela remota ou não,esses tipos de branches
+  são conhecidos como tracking branches
+|-git checkout -t <branch remota> //Cria uma branch a partir de uma branch remota
+    sem ter que especificar o nome da nova branch, ele ira ter o nome da branch remota
+|-git checkout -- <nome do arquivo> //Remove as mudanças feitas que ainda
   não foram para area de stage
-
+----------------------------------------------------------------------
+|git fetch <nome repositório remoto> // Ira buscar os novos commits no repositório
+  remoto
 ----------------------------------------------------------------------
 git reset -- <nome do arquivo> //Retira o arquivo da area de stage e ele
   fica como se não tivesse sido rastrado
@@ -134,3 +166,4 @@ Coisas do GitHub
 Fork //Faz uma cópia de um repositório no git hub para sua conta no github
 
  ----------------------------------------------------------------------
+marge tool- ferramenta para manipular conflitos 
