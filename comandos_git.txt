@@ -132,10 +132,12 @@ git checkout <nome da branch> //Troca para branch especificada
     sem ter que especificar o nome da nova branch, ele ira ter o nome da branch remota
 |-git checkout -- <nome do arquivo> //Remove as mudanças feitas que ainda
   não foram para area de stage
+  git checkout 'master@{7 days ago}' -- path/to/file.txt
+
 ----------------------------------------------------------------------
 |git fetch <nome repositório remoto> // Ira buscar os novos commits no repositório
   remoto
-----------------------------------------------------------------------
+  --------    --------------------------------------------------------------
 git reset -- <nome do arquivo> //Retira o arquivo da area de stage e ele
   fica como se não tivesse sido rastrado
   |-git reset //Mesma coisa que o anterior mas vai se aplicar a todos os arquivos
@@ -166,4 +168,4 @@ Coisas do GitHub
 Fork //Faz uma cópia de um repositório no git hub para sua conta no github
 
  ----------------------------------------------------------------------
-marge tool- ferramenta para manipular conflitos 
+marge tool- ferramenta para manipular conflitos
